@@ -7,7 +7,7 @@ pipeline {
                     withAWS(credentials:'aws-static') {
                         withAWS(profile:'jenkins') {
                             s3Upload(file:index.html, bucket:shon-demo, path:/)
-                        }   
+                        }
                     }
                 }
             }
