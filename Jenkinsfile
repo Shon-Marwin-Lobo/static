@@ -6,11 +6,9 @@ pipeline {
                 withAWS(region:'us-west-2') {
                     withAWS(credentials:'aws-static') {
                         withAWS(profile:'jenkins') {
-                            s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:index.html, bucket:shon-demo, path:/)
-                        }
-                        
+                            s3Upload(file:index.html, bucket:shon-demo, path:/)
+                        }   
                     }
-                    
                 }
             }
         }
